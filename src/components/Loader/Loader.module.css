@@ -1,6 +1,5 @@
-.LoaderThumb {
+.Loader {
   display: flex;
-  align-items: center;
+  padding-top: 300px;
   justify-content: center;
-  margin-top: 10px;
 }

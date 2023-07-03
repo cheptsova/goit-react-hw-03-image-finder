@@ -1,13 +1,18 @@
-import { ThreeCircles } from 'react-loader-spinner';
+import { SelfBuildingSquareSpinner } from 'react-epic-spinners';
 import style from './Loader.module.css';
+import PropTypes from 'prop-types';
 
-export const Loader = () => (
-  <div className={style.LoaderThumb}>
-    <ThreeCircles
-      color="#3f51b5"
-      height={60}
-      width={60}
-      ariaLabel="three-circles-rotating"
-    />
-  </div>
-);
+const Loader = ({ color, size }) => {
+  return (
+    <div className={style.Loader}>
+      <SelfBuildingSquareSpinner color={color} size={size} />
+    </div>
+  );
+};
+
+Loader.propTypes = {
+  color: PropTypes.string.isRequired,
+  size: PropTypes.number.isRequired,
+};
+
+export default Loader;
